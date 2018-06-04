@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="generator"
+        content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+        <meta charset="utf-8" />
+        <title>Elite RPG Character Sheet</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link href="css/lux/bootstrap.min.css" rel="stylesheet" title="main" />
+        <link rel="stylesheet" href="css/custom.min.css" />
+        <link rel="stylesheet" href="css/xtra_custom.css" />
+    </head>
+    <body>
+    <!-- Navbar -->
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <div class="container">
+            <a href="../" class="navbar-brand">ELITE RPG Character Sheet</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="character">Character</a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">New</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Save</a> 
+                        <a class="dropdown-item" href="#">Load</a></div>
+                    </li>
+                    <li class="nav-item dropdown" id="theme-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Theme</a>
+                        <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item change-style-menu-item" rel="cyborg">Cyborg</a> 
+                        <a href="#" class="dropdown-item change-style-menu-item" rel="cerulean">Cerulean</a> 
+                        <a href="#" class="dropdown-item change-style-menu-item" rel="cosmo">Cosmo</a> 
+                        <a href="#" class="dropdown-item change-style-menu-item" rel="flatly">Flatly</a> 
+                        <a href="#" class="dropdown-item change-style-menu-item" rel="journal">Journal</a> 
+                        <a href="#" class="dropdown-item change-style-menu-item" rel="slate">Slate</a> 
+                        <a href="#" class="dropdown-item change-style-menu-item" rel="spacelab">Spacelab</a> 
+                        <a href="#" class="dropdown-item change-style-menu-item" rel="litera">Litera</a> 
+                        <a href="#" class="dropdown-item change-style-menu-item" rel="lumen">Lumen</a> 
+                        <a href="#" class="dropdown-item change-style-menu-item" rel="lux">Lux</a> 
+                        <a href="#" class="dropdown-item change-style-menu-item" rel="materia">Materia</a> 
+                        <a href="#" class="dropdown-item change-style-menu-item" rel="united">United</a> 
+                        <a href="#" class="dropdown-item change-style-menu-item" rel="darkly">Darkly</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="clearfix">
+            <div class="alert alert-dismissible alert-info">
+                <h1>Project is still in development</h1>
+                <h2>Help me out on GitHub!</h2>
+            </div>
+            <div class="row">
+                <h1>Character Info:</h1>
+            </div>
+            <form class="section">
+                <fieldset>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                            <label for="name" class="col-form-label">Character Name</label> 
+                            <input type="text" class="form-control" id="name" placeholder="CMDR John Doe" /></div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                            <label for="rank" class="col-form-label">Rank</label> 
+                            <input type="number" step="1" class="form-control" id="rank" placeholder="1" /></div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                            <label for="rankPoints" class="col-form-label">Rank Points</label> 
+                            <input type="number" step="1" class="form-control" id="rankPoints" placeholder="0" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="form-group">
+                            <label for="gender" class="col-form-label">Gender</label> 
+                            <input type="text" class="form-control" id="gender" placeholder="Male/Female/Other" /></div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="form-group">
+                            <label for="height" class="col-form-label">Height</label> 
+                            <input type="text" class="form-control" id="height" placeholder="6&#39;" /></div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="form-group">
+                            <label for="weight" class="col-form-label">Weight</label> 
+                            <input type="text" class="form-control" id="weight" placeholder="160 lbs." /></div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="form-group">
+                            <label for="age" class="col-form-label">Age</label> 
+                            <input type="text" class="form-control" id="age" placeholder="21" /></div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <div class="row">
+                <h1>Critical Stats:</h1>
+            </div>
+            <form class="section">
+                <fieldset>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="endurance" class="col-form-label">Endurance</label>
+                                <input type="number" class="form-control" id="endurance" placeholder="20" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="karma" class="col-form-label">Karma</label>
+                                <input type="number" class="form-control" id="kamra" placeholder="10" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="cDodge" class="col-form-label">DEFENCE (Dodge)</label>
+                                <input type="number" class="form-control-lg" disabled id="cDodge" placeholder="20" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="cTactics" class="col-form-label">INITIATIVE (Tactics)</label>
+                                <input type="number" class="form-control-lg" disabled id="cTactics" placeholder="20" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="cParry" class="col-form-label">DEFENCE (Parry)</label>
+                                <input type="number" class="form-control-lg" disabled id="cParry" placeholder="20" />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <div class="row">
+                <h1>Backgrounds</h1>
+            </div>
+            <form class="section">
+                <fieldset>
+                    <div class="row">
+                        <div class='col-md-2 col-sm-6'>
+                            <div class="form-group">
+                                <label  for="background1" class="col-form-label">Background 1</label>
+                                <select class="form-control" responsetype="background" id="background1">
+                                    <option>(NONE)</option>
+                                    <option>Accountant</option>
+                                    <option>Anarchist</option>
+                                    <option>Army Trained (2 Choices)</option>
+                                    <option>Borderland Homeworld</option>
+                                    <option>Born on the Streets</option>
+                                    <option>Boxer</option>
+                                    <option>Cheerleader</option>
+                                    <option>Child Actor</option>
+                                    <option>Community Youth Worker</option>
+                                    <option>Computer Game Designer</option>
+                                    <option>Criminal Family</option>
+                                    <option>Cyborg</option>
+                                    <option>Docking Bay Operative</option>
+                                    <option>Engineer</option>
+                                    <option>Explorer Corp</option>
+                                    <option>Fighter Pilot</option>
+                                    <option>Freedom Fighter</option>
+                                    <option>Frontier Trader</option>
+                                    <option>Fuel Rat</option>
+                                    <option>Gene Mod Baby</option>
+                                    <option>Gym Freak</option>
+                                    <option>Hacker</option>
+                                    <option>High Tech Homeworld</option>
+                                    <option>Hoopy Casino Croupier</option>
+                                    <option>Lave Radio Host</option>
+                                    <option>Martial Artist (2 Choices)</option>
+                                    <option>Mercenary (2 Choices)</option>
+                                    <option>Mining Engineer</option>
+                                    <option>Minor Politician</option>
+                                    <option>Monk/Nun</option>
+                                    <option>Navy Trained (2 Choices)</option>
+                                    <option>Officer</option>
+                                    <option>Partner</option>
+                                    <option>Petty Criminal</option>
+                                    <option>Police Officer</option>
+                                    <option>Private Detective</option>
+                                    <option>Ran Away From Home</option>
+                                    <option>Scientist</option>
+                                    <option>Scout Leader</option>
+                                    <option>Second Hand Spaceship Dealer</option>
+                                    <option>Secret Agent (2 Choices)</option>
+                                    <option>Self-Taught</option>
+                                    <option>Ship Hand</option>
+                                    <option>Sports College</option>
+                                    <option>Stockbroker</option>
+                                    <option>Teacher</option>
+                                    <option>Trained Doctor</option>
+                                    <option>Treasure Hunter</option>
+                                    <option>Trucker</option>
+                                    <option>University Graduate</option>
+                                    <option>Vehicle Nut</option>
+                                    <option>Wise Guy (2 Chocies)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class='col-md-2 col-sm-6'>
+                            <div class="form-group">
+                                <label  for="background2" class="col-form-label">Background 2</label>
+                                <select class="form-control" responsetype="background" id="background2">
+                                    <option>(NONE)</option>
+                                    <option>Accountant</option>
+                                    <option>Anarchist</option>
+                                    <option>Army Trained (2 Choices)</option>
+                                    <option>Borderland Homeworld</option>
+                                    <option>Born on the Streets</option>
+                                    <option>Boxer</option>
+                                    <option>Cheerleader</option>
+                                    <option>Child Actor</option>
+                                    <option>Community Youth Worker</option>
+                                    <option>Computer Game Designer</option>
+                                    <option>Criminal Family</option>
+                                    <option>Cyborg</option>
+                                    <option>Docking Bay Operative</option>
+                                    <option>Engineer</option>
+                                    <option>Explorer Corp</option>
+                                    <option>Fighter Pilot</option>
+                                    <option>Freedom Fighter</option>
+                                    <option>Frontier Trader</option>
+                                    <option>Fuel Rat</option>
+                                    <option>Gene Mod Baby</option>
+                                    <option>Gym Freak</option>
+                                    <option>Hacker</option>
+                                    <option>High Tech Homeworld</option>
+                                    <option>Hoopy Casino Croupier</option>
+                                    <option>Lave Radio Host</option>
+                                    <option>Martial Artist (2 Choices)</option>
+                                    <option>Mercenary (2 Choices)</option>
+                                    <option>Mining Engineer</option>
+                                    <option>Minor Politician</option>
+                                    <option>Monk/Nun</option>
+                                    <option>Navy Trained (2 Choices)</option>
+                                    <option>Officer</option>
+                                    <option>Partner</option>
+                                    <option>Petty Criminal</option>
+                                    <option>Police Officer</option>
+                                    <option>Private Detective</option>
+                                    <option>Ran Away From Home</option>
+                                    <option>Scientist</option>
+                                    <option>Scout Leader</option>
+                                    <option>Second Hand Spaceship Dealer</option>
+                                    <option>Secret Agent (2 Choices)</option>
+                                    <option>Self-Taught</option>
+                                    <option>Ship Hand</option>
+                                    <option>Sports College</option>
+                                    <option>Stockbroker</option>
+                                    <option>Teacher</option>
+                                    <option>Trained Doctor</option>
+                                    <option>Treasure Hunter</option>
+                                    <option>Trucker</option>
+                                    <option>University Graduate</option>
+                                    <option>Vehicle Nut</option>
+                                    <option>Wise Guy (2 Chocies)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class='col-md-2 col-sm-6'>
+                            <div class="form-group">
+                                <label  for="background3" class="col-form-label">Background 3</label>
+                                <select class="form-control" responsetype="background" id="background3">
+                                    <option>(NONE)</option>
+                                    <option>Accountant</option>
+                                    <option>Anarchist</option>
+                                    <option>Army Trained (2 Choices)</option>
+                                    <option>Borderland Homeworld</option>
+                                    <option>Born on the Streets</option>
+                                    <option>Boxer</option>
+                                    <option>Cheerleader</option>
+                                    <option>Child Actor</option>
+                                    <option>Community Youth Worker</option>
+                                    <option>Computer Game Designer</option>
+                                    <option>Criminal Family</option>
+                                    <option>Cyborg</option>
+                                    <option>Docking Bay Operative</option>
+                                    <option>Engineer</option>
+                                    <option>Explorer Corp</option>
+                                    <option>Fighter Pilot</option>
+                                    <option>Freedom Fighter</option>
+                                    <option>Frontier Trader</option>
+                                    <option>Fuel Rat</option>
+                                    <option>Gene Mod Baby</option>
+                                    <option>Gym Freak</option>
+                                    <option>Hacker</option>
+                                    <option>High Tech Homeworld</option>
+                                    <option>Hoopy Casino Croupier</option>
+                                    <option>Lave Radio Host</option>
+                                    <option>Martial Artist (2 Choices)</option>
+                                    <option>Mercenary (2 Choices)</option>
+                                    <option>Mining Engineer</option>
+                                    <option>Minor Politician</option>
+                                    <option>Monk/Nun</option>
+                                    <option>Navy Trained (2 Choices)</option>
+                                    <option>Officer</option>
+                                    <option>Partner</option>
+                                    <option>Petty Criminal</option>
+                                    <option>Police Officer</option>
+                                    <option>Private Detective</option>
+                                    <option>Ran Away From Home</option>
+                                    <option>Scientist</option>
+                                    <option>Scout Leader</option>
+                                    <option>Second Hand Spaceship Dealer</option>
+                                    <option>Secret Agent (2 Choices)</option>
+                                    <option>Self-Taught</option>
+                                    <option>Ship Hand</option>
+                                    <option>Sports College</option>
+                                    <option>Stockbroker</option>
+                                    <option>Teacher</option>
+                                    <option>Trained Doctor</option>
+                                    <option>Treasure Hunter</option>
+                                    <option>Trucker</option>
+                                    <option>University Graduate</option>
+                                    <option>Vehicle Nut</option>
+                                    <option>Wise Guy (2 Chocies)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class='col-md-2 col-sm-6'>
+                            <div class="form-group">
+                                <label  for="background4" class="col-form-label">Background 4</label>
+                                <select class="form-control" responsetype="background" id="background4">
+                                    <option>(NONE)</option>
+                                    <option>Accountant</option>
+                                    <option>Anarchist</option>
+                                    <option>Army Trained (2 Choices)</option>
+                                    <option>Borderland Homeworld</option>
+                                    <option>Born on the Streets</option>
+                                    <option>Boxer</option>
+                                    <option>Cheerleader</option>
+                                    <option>Child Actor</option>
+                                    <option>Community Youth Worker</option>
+                                    <option>Computer Game Designer</option>
+                                    <option>Criminal Family</option>
+                                    <option>Cyborg</option>
+                                    <option>Docking Bay Operative</option>
+                                    <option>Engineer</option>
+                                    <option>Explorer Corp</option>
+                                    <option>Fighter Pilot</option>
+                                    <option>Freedom Fighter</option>
+                                    <option>Frontier Trader</option>
+                                    <option>Fuel Rat</option>
+                                    <option>Gene Mod Baby</option>
+                                    <option>Gym Freak</option>
+                                    <option>Hacker</option>
+                                    <option>High Tech Homeworld</option>
+                                    <option>Hoopy Casino Croupier</option>
+                                    <option>Lave Radio Host</option>
+                                    <option>Martial Artist (2 Choices)</option>
+                                    <option>Mercenary (2 Choices)</option>
+                                    <option>Mining Engineer</option>
+                                    <option>Minor Politician</option>
+                                    <option>Monk/Nun</option>
+                                    <option>Navy Trained (2 Choices)</option>
+                                    <option>Officer</option>
+                                    <option>Partner</option>
+                                    <option>Petty Criminal</option>
+                                    <option>Police Officer</option>
+                                    <option>Private Detective</option>
+                                    <option>Ran Away From Home</option>
+                                    <option>Scientist</option>
+                                    <option>Scout Leader</option>
+                                    <option>Second Hand Spaceship Dealer</option>
+                                    <option>Secret Agent (2 Choices)</option>
+                                    <option>Self-Taught</option>
+                                    <option>Ship Hand</option>
+                                    <option>Sports College</option>
+                                    <option>Stockbroker</option>
+                                    <option>Teacher</option>
+                                    <option>Trained Doctor</option>
+                                    <option>Treasure Hunter</option>
+                                    <option>Trucker</option>
+                                    <option>University Graduate</option>
+                                    <option>Vehicle Nut</option>
+                                    <option>Wise Guy (2 Chocies)</option>
+                                </select>
+                            </div>
+                        </div><div class='col-md-2 col-sm-6'>
+                            <div class="form-group">
+                                <label  for="background5" class="col-form-label">Background 5</label>
+                                <select class="form-control" responsetype="background" id="background5">
+                                    <option>(NONE)</option>
+                                    <option>Accountant</option>
+                                    <option>Anarchist</option>
+                                    <option>Army Trained (2 Choices)</option>
+                                    <option>Borderland Homeworld</option>
+                                    <option>Born on the Streets</option>
+                                    <option>Boxer</option>
+                                    <option>Cheerleader</option>
+                                    <option>Child Actor</option>
+                                    <option>Community Youth Worker</option>
+                                    <option>Computer Game Designer</option>
+                                    <option>Criminal Family</option>
+                                    <option>Cyborg</option>
+                                    <option>Docking Bay Operative</option>
+                                    <option>Engineer</option>
+                                    <option>Explorer Corp</option>
+                                    <option>Fighter Pilot</option>
+                                    <option>Freedom Fighter</option>
+                                    <option>Frontier Trader</option>
+                                    <option>Fuel Rat</option>
+                                    <option>Gene Mod Baby</option>
+                                    <option>Gym Freak</option>
+                                    <option>Hacker</option>
+                                    <option>High Tech Homeworld</option>
+                                    <option>Hoopy Casino Croupier</option>
+                                    <option>Lave Radio Host</option>
+                                    <option>Martial Artist (2 Choices)</option>
+                                    <option>Mercenary (2 Choices)</option>
+                                    <option>Mining Engineer</option>
+                                    <option>Minor Politician</option>
+                                    <option>Monk/Nun</option>
+                                    <option>Navy Trained (2 Choices)</option>
+                                    <option>Officer</option>
+                                    <option>Partner</option>
+                                    <option>Petty Criminal</option>
+                                    <option>Police Officer</option>
+                                    <option>Private Detective</option>
+                                    <option>Ran Away From Home</option>
+                                    <option>Scientist</option>
+                                    <option>Scout Leader</option>
+                                    <option>Second Hand Spaceship Dealer</option>
+                                    <option>Secret Agent (2 Choices)</option>
+                                    <option>Self-Taught</option>
+                                    <option>Ship Hand</option>
+                                    <option>Sports College</option>
+                                    <option>Stockbroker</option>
+                                    <option>Teacher</option>
+                                    <option>Trained Doctor</option>
+                                    <option>Treasure Hunter</option>
+                                    <option>Trucker</option>
+                                    <option>University Graduate</option>
+                                    <option>Vehicle Nut</option>
+                                    <option>Wise Guy (2 Chocies)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <div class="row">
+                <h1>Skills</h1>
+            </div>
+            <form class="section">
+                <div class="card mb-3">
+                    <h3 class="card-header">Personal Combat</h3>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Skill</th>
+                                    <th scope="col">Score</th>
+                                    <th scope="col">Modifiers</th>
+                                    <th scope="col">Bonus</th>
+                                    <th scope="col">*Checked*</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Dodge</th>
+                                    <td><input type="number" class="form-control" id='dodge' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="dodgeModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="dodgeBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="dodgeChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Energy Weapons</th>
+                                    <td><input type="number" class="form-control" id='energyWeapons' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="energyWeaponsModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="energyWeaponsBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="energyWeaponsChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Fighting</th>
+                                    <td><input type="number" class="form-control" id='fighting' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="fightingModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="fightingBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="fightingChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Grenade</th>
+                                    <td><input type="number" class="form-control" id='grenade' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="grenadeModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="grenadeBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="grenadeChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Heavy Weapons</th>
+                                    <td><input type="number" class="form-control" id='heavyWeapons' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="heavyWeaponsModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="heavyWeaponsBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="heavyWeaponsChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Kinetic Weapons</th>
+                                    <td><input type="number" class="form-control" id='kineticWeapons' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="kineticWeaponsModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="kineticWeaponsBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="kineticWeaponsChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Melee Weapons</th>
+                                    <td><input type="number" class="form-control" id='meleeWeapons' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="meleeWeaponsModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="meleeWeaponsBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="meleeWeaponsChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Parry</th>
+                                    <td><input type="number" class="form-control" id='parry' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="parryModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="parryBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="parryChecked" /></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <h3 class="card-header">Intelligence</h3>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Skill</th>
+                                    <th scope="col">Score</th>
+                                    <th scope="col">Bonus</th>
+                                    <th scope="col">*Checked*</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Computer</th>
+                                    <td><input type="number" class="form-control" id='computer' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="computerModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="computerBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="compnuterChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Culture &amp; Law</th>
+                                    <td><input type="number" class="form-control" id='cultureAndLaw' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="cultureAndLawModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="cultureAndLawBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="cultureAndLawChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Cyber</th>
+                                    <td><input type="number" class="form-control" id='cyber' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="cyberModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="cyberBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="cyberChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Medicine</th>
+                                    <td><input type="number" class="form-control" id='medicine' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="medicineModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="medicineBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="medicineChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Planetary Knowledge</th>
+                                    <td><input type="number" class="form-control" id='planetaryKnowledge' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="planetaryKnowledgeModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="planetaryKnowledgeBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="planetaryKnowledgeChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Science</th>
+                                    <td><input type="number" class="form-control" id='science' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="scienceModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="scienceBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="scienceChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Tactics</th>
+                                    <td><input type="number" class="form-control" id='tactics' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="tacticsModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="tacticsBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="tacticsChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Trading</th>
+                                    <td><input type="number" class="form-control" id='trading' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="tradingModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="tradingBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="tradingChecked" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <h3 class="card-header">Social Skills</h3>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Skill</th>
+                                    <th scope="col">Score</th>
+                                    <th scope="col">Bonus</th>
+                                    <th scope="col">*Checked*</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Bargain</th>
+                                    <td><input type="number" class="form-control" id='bargain' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="bargainModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="bargainBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="bargainChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Bluff</th>
+                                    <td><input type="number" class="form-control" id='bluff' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="bluffModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="bluffBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="bluffChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Charm</th>
+                                    <td><input type="number" class="form-control" id='charm' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="charmModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="charmBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="charmChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Diplomacy</th>
+                                    <td><input type="number" class="form-control" id='diplomacy' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="diplomacyModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="diplomacyBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="diplomacyChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Gambling</th>
+                                    <td><input type="number" class="form-control" id='gambling' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="gamblingModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="gamblingBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="gamblingChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Insight</th>
+                                    <td><input type="number" class="form-control" id='insight' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="insightModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="insightBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="insightChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Intimidate</th>
+                                    <td><input type="number" class="form-control" id='intimidate' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="intimidateModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="intimidateBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="intimidateChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Streetwise</th>
+                                    <td><input type="number" class="form-control" id='streetwise' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="streetwiseModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="streetwiseBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="streetwiseChecked" /></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <h3 class="card-header">Vehicle Skills</h3>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Skill</th>
+                                    <th scope="col">Score</th>
+                                    <th scope="col">Modifiers</th>
+                                    <th scope="col">Bonus</th>
+                                    <th scope="col">*Checked*</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Navigate</th>
+                                    <td><input type="number" class="form-control" id='navigation' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="navigationModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="navigationBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="navigationChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Repair</th>
+                                    <td><input type="number" class="form-control" id='repair' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="repairModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="repairBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="repairChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Spaceship Piloting</th>
+                                    <td><input type="number" class="form-control" id='spaceshipPiloting' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="spaceshipPilotingModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="spaceshipPilotingBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="spaceshipPilotingChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Spaceship Weapons</th>
+                                    <td><input type="number" class="form-control" id='spaceshipWeapons' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="spaceshipWeaponsModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="spaceshipWeaponsBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="spaceshipWeaponsChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Systems</th>
+                                    <td><input type="number" class="form-control" id='systems' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="systemsModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="systemsBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="systemsChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Vehicle Piloting</th>
+                                    <td><input type="number" class="form-control" id='vehiclePiloting' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="vehiclePilotingModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="vehiclePilotingBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="vehiclePilotingChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Vehicle Weapons</th>
+                                    <td><input type="number" class="form-control" id='vehicleWeapons' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="vehicleWeaponsModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="vehicleWeaponsBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="vehicleWeaponsChecked" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <h3 class="card-header">Espionage</h3>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Skill</th>
+                                    <th scope="col">Score</th>
+                                    <th scope="col">Modifiers</th>
+                                    <th scope="col">Bonus</th>
+                                    <th scope="col">*Checked*</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Athletics</th>
+                                    <td><input type="number" class="form-control" id='athletics' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="athleticsModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="athleticsBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="athleticsChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Perception</th>
+                                    <td><input type="number" class="form-control" id='perception' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="perceptionModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="perceptionBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="perceptionChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Security</th>
+                                    <td><input type="number" class="form-control" id='secutiry' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="secutiryModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="secutiryBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="secutiryChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sleight of Hand</th>
+                                    <td><input type="number" class="form-control" id='sleightOfHand' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="sleightOfHandModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="sleightOfHandBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="sleightOfHandChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Stealth</th>
+                                    <td><input type="number" class="form-control" id='stealth' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="stealthModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="stealthBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="stealthChecked" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Survival</th>
+                                    <td><input type="number" class="form-control" id='survival' value="10" responsetype="skill" /></td>
+                                    <td><input type="number" class="form-control" disabled id="survivalModifiers" responseType="skillModifier" value=0 /></td>
+                                    <td><input type="number" class="form-control" disabled id="survivalBonus" value="1" /></td>
+                                    <td><input type="checkbox" class='form-control' id="survivalChecked" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </form>
+            <div class='row'>
+                <h1>Enhancements</h1>
+            </div>
+            <form class='section'>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <table class='table table-hover'>
+                            
+                        </table>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--Scripts and etc -->
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/custom.js"></script> 
+    <script src="js/xtra_custom.js"></script></body>
+</html>
